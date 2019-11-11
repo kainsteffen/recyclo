@@ -135,6 +135,7 @@ public class GameController : MonoBehaviour
         uiController.SetEndScreen(false);
         uiController.SetIngameUI(true);
         timeController.StopSlowMotion();
+        touchController.enabled = true;
         levelController.ResetLevel();
         player.gameObject.SetActive(true);
         player.Reset();

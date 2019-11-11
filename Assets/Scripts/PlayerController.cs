@@ -115,20 +115,17 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
             stateMachine.Update();
-            HandleSlowMoInput();
+            HandleFocusModeInput();
 
             if (focusMode && !isDead)
             {
                 if (Input.GetMouseButton(0))
                 {
-                    aimDirection = invertedAiming ? (dragStartPosition - (Vector2)Input.mousePosition) : -(dragStartPosition - (Vector2)Input.mousePosition);
-                    DrawLine(shootingPoint.position, ((Vector2)shootingPoint.position + (aimDirection.normalized * aimLineLength)));
+                    ExecuteFocusMode();
                 }
                 if (Input.GetMouseButtonUp(0))
                 {
-                    focusMode = false;
-                    lr.enabled = false;
-                    SoundManager.Instance.Stop("charge");
+
 
                     if (aimDirection.magnitude > 0)
                     {
@@ -141,12 +138,12 @@ public class PlayerController : MonoBehaviour
                         }
                     }
 
-                    chargeParticle.Stop();
+                StopFocusMode();
 
-                    skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
+                skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
                     skeletonAnimation.state.AddAnimation(0, "Haduken End", false, 0.433f);
                     skeletonAnimation.state.AddAnimation(0, "Running", true, 0.633f);
-                    timeController.StopSlowMotion();
+                    
                 }
             }
             DetectItems();
@@ -263,21 +260,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void HandleSlowMoInput()
+    public void HandleFocusModeInput()
     {
         if (touchController.GetLongPress() && GameController.Instance.gameState == GameController.GameState.Ingame)
         {
-            if (currentAmmo >= 1)
-            {
-                SoundManager.Instance.PlayLoop("charge");
-                skeletonAnimation.state.SetAnimation(0, "Haduken Start", false);
-                skeletonAnimation.state.AddAnimation(0, "Haduken Charging", true, 0.5f);
-                chargeParticle.Play();
-                focusMode = true;
-                lr.enabled = true;
-                dragStartPosition = Input.mousePosition;
-                timeController.StartSlowMotion();
-            }
+            StartFocusMode();
         }
     }
 
@@ -391,6 +378,36 @@ public class PlayerController : MonoBehaviour
         {
 
         }
+    }
+
+    public void StartFocusMode()
+    {
+        if (currentAmmo >= 1)
+        {
+            SoundManager.Instance.PlayLoop("charge");
+            skeletonAnimation.state.SetAnimation(0, "Haduken Start", false);
+            skeletonAnimation.state.AddAnimation(0, "Haduken Charging", true, 0.5f);
+            chargeParticle.Play();
+            focusMode = true;
+            lr.enabled = true;
+            dragStartPosition = Input.mousePosition;
+            timeController.StartSlowMotion();
+        }
+    }
+
+    public void ExecuteFocusMode()
+    {
+        aimDirection = invertedAiming ? (dragStartPosition - (Vector2)Input.mousePosition) : -(dragStartPosition - (Vector2)Input.mousePosition);
+        DrawLine(shootingPoint.position, ((Vector2)shootingPoint.position + (aimDirection.normalized * aimLineLength)));
+    }
+
+    public void StopFocusMode()
+    {
+        chargeParticle.Stop();
+        timeController.StopSlowMotion();
+        focusMode = false;
+        lr.enabled = false;
+        SoundManager.Instance.Stop("charge");
     }
 
     public void StartWallSlide()
@@ -682,11 +699,13 @@ public class DeadState : State
     public void Enter()
     {
         timer = 2;
-        SoundManager.Instance.Stop("charge");
+        owner.touchController.enabled = false;
+
         SoundManager.Instance.FadeOut("gameplay_Bgm");
         SoundManager.Instance.Play("death");
 
-        owner.timeController.StopSlowMotion();
+        owner.StopFocusMode();
+
         owner.skeletonAnimation.ClearState();
         owner.skeletonAnimation.state.SetAnimation(0, "Death Animation", false);
     }
