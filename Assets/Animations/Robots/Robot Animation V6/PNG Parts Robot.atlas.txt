@@ -1,0 +1,209 @@
+
+PNG Parts Robot.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 663, 328
+  orig: 663, 328
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 839, 75
+  size: 710, 328
+  orig: 710, 328
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 332
+  size: 835, 328
+  orig: 835, 328
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 869, 405
+  size: 865, 328
+  orig: 865, 328
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 539, 1633
+  size: 865, 359
+  orig: 865, 359
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 539, 1272
+  size: 865, 359
+  orig: 865, 359
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 2, 662
+  size: 865, 421
+  orig: 865, 421
+  offset: 0, 0
+  index: -1
+Bag
+  rotate: false
+  xy: 1551, 24
+  size: 328, 470
+  orig: 328, 470
+  offset: 0, 0
+  index: -1
+Blast 1
+  rotate: true
+  xy: 1469, 843
+  size: 242, 244
+  orig: 242, 244
+  offset: 0, 0
+  index: -1
+Blast 2
+  rotate: false
+  xy: 1716, 1393
+  size: 319, 231
+  orig: 319, 231
+  offset: 0, 0
+  index: -1
+Blast 3
+  rotate: false
+  xy: 1406, 1626
+  size: 324, 366
+  orig: 324, 366
+  offset: 0, 0
+  index: -1
+Blsat 4
+  rotate: true
+  xy: 1469, 1087
+  size: 240, 400
+  orig: 240, 400
+  offset: 0, 0
+  index: -1
+Eyes Annoyed
+  rotate: true
+  xy: 667, 92
+  size: 238, 129
+  orig: 238, 129
+  offset: 0, 0
+  index: -1
+Eyes Blink
+  rotate: false
+  xy: 539, 1107
+  size: 242, 25
+  orig: 242, 25
+  offset: 0, 0
+  index: -1
+Eyes Crying
+  rotate: false
+  xy: 1715, 967
+  size: 268, 118
+  orig: 268, 118
+  offset: 0, 0
+  index: -1
+Eyes Dead
+  rotate: true
+  xy: 1931, 1135
+  size: 256, 104
+  orig: 256, 104
+  offset: 0, 0
+  index: -1
+Eyes Default
+  rotate: false
+  xy: 539, 1134
+  size: 242, 136
+  orig: 242, 136
+  offset: 0, 0
+  index: -1
+L Antena
+  rotate: true
+  xy: 1199, 435
+  size: 59, 213
+  orig: 59, 213
+  offset: 0, 0
+  index: -1
+L Arm
+  rotate: true
+  xy: 1199, 766
+  size: 504, 268
+  orig: 504, 268
+  offset: 0, 0
+  index: -1
+L Foot
+  rotate: true
+  xy: 783, 1096
+  size: 174, 78
+  orig: 174, 78
+  offset: 0, 0
+  index: -1
+R Foot
+  rotate: true
+  xy: 783, 1096
+  size: 174, 78
+  orig: 174, 78
+  offset: 0, 0
+  index: -1
+L Hand
+  rotate: true
+  xy: 1855, 1776
+  size: 216, 186
+  orig: 216, 186
+  offset: 0, 0
+  index: -1
+R hand
+  rotate: true
+  xy: 1855, 1776
+  size: 216, 186
+  orig: 216, 186
+  offset: 0, 0
+  index: -1
+L Leg
+  rotate: false
+  xy: 1732, 1656
+  size: 121, 336
+  orig: 121, 336
+  offset: 0, 0
+  index: -1
+Plant
+  rotate: false
+  xy: 1406, 1329
+  size: 308, 295
+  orig: 308, 295
+  offset: 0, 0
+  index: -1
+R Antena
+  rotate: true
+  xy: 1716, 1332
+  size: 59, 213
+  orig: 59, 213
+  offset: 0, 0
+  index: -1
+R Arm
+  rotate: false
+  xy: 1199, 496
+  size: 504, 268
+  orig: 504, 268
+  offset: 0, 0
+  index: -1
+R Leg
+  rotate: false
+  xy: 1705, 505
+  size: 120, 336
+  orig: 120, 336
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: false
+  xy: 2, 1085
+  size: 535, 907
+  orig: 535, 907
+  offset: 0, 0
+  index: -1

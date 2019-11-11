@@ -1,0 +1,13 @@
+
+Trash_Pile_Tall.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 0
+  rotate: true
+  xy: 2, 2
+  size: 419, 741
+  orig: 419, 741
+  offset: 0, 0
+  index: -1

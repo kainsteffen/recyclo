@@ -1,0 +1,48 @@
+
+Panda.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Panda armL
+  rotate: false
+  xy: 266, 72
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+Panda armR
+  rotate: false
+  xy: 266, 27
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+Panda head
+  rotate: false
+  xy: 2, 2
+  size: 136, 113
+  orig: 136, 113
+  offset: 0, 0
+  index: -1
+Panda hot bod
+  rotate: true
+  xy: 140, 20
+  size: 95, 80
+  orig: 95, 80
+  offset: 0, 0
+  index: -1
+Panda legL
+  rotate: false
+  xy: 222, 64
+  size: 42, 51
+  orig: 42, 51
+  offset: 0, 0
+  index: -1
+Panda legR
+  rotate: false
+  xy: 222, 11
+  size: 42, 51
+  orig: 42, 51
+  offset: 0, 0
+  index: -1

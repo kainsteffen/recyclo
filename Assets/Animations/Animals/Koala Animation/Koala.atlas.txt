@@ -1,0 +1,48 @@
+
+Koala.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Koala Arm L
+  rotate: true
+  xy: 322, 12
+  size: 45, 42
+  orig: 45, 42
+  offset: 0, 0
+  index: -1
+Koala Arm R
+  rotate: true
+  xy: 366, 12
+  size: 45, 42
+  orig: 45, 42
+  offset: 0, 0
+  index: -1
+Koala Head
+  rotate: false
+  xy: 2, 2
+  size: 180, 113
+  orig: 180, 113
+  offset: 0, 0
+  index: -1
+Koala Torso
+  rotate: true
+  xy: 184, 11
+  size: 104, 78
+  orig: 104, 78
+  offset: 0, 0
+  index: -1
+Koala leg L
+  rotate: true
+  xy: 264, 22
+  size: 93, 56
+  orig: 93, 56
+  offset: 0, 0
+  index: -1
+Koala leg R
+  rotate: false
+  xy: 322, 59
+  size: 48, 56
+  orig: 48, 56
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+Flower_D.png
+size: 128,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 0
+  rotate: false
+  xy: 2, 2
+  size: 69, 146
+  orig: 69, 146
+  offset: 0, 0
+  index: -1

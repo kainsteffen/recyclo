@@ -1,0 +1,55 @@
+
+Tiger.png
+size: 258,162
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Tiger Head
+  rotate: true
+  xy: 2, 7
+  size: 153, 109
+  orig: 153, 109
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: false
+  xy: 113, 73
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+armL
+  rotate: false
+  xy: 171, 11
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+armR
+  rotate: true
+  xy: 213, 14
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+legL
+  rotate: false
+  xy: 209, 109
+  size: 42, 51
+  orig: 42, 51
+  offset: 0, 0
+  index: -1
+legR
+  rotate: false
+  xy: 209, 56
+  size: 42, 51
+  orig: 42, 51
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 113, 2
+  size: 69, 56
+  orig: 69, 56
+  offset: 0, 0
+  index: -1

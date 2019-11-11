@@ -1,0 +1,250 @@
+
+PNG Parts Robot.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 474, 769
+  size: 663, 328
+  orig: 663, 328
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1139, 693
+  size: 710, 328
+  orig: 710, 328
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 439
+  size: 835, 328
+  orig: 835, 328
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 839, 363
+  size: 865, 328
+  orig: 865, 328
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 2
+  size: 865, 359
+  orig: 865, 359
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 869, 2
+  size: 865, 359
+  orig: 865, 359
+  offset: 0, 0
+  index: -1
+Bag
+  rotate: true
+  xy: 2, 938
+  size: 328, 470
+  orig: 328, 470
+  offset: 0, 0
+  index: -1
+Blast 1
+  rotate: true
+  xy: 1328, 1356
+  size: 242, 244
+  orig: 242, 244
+  offset: 0, 0
+  index: -1
+Blast 2
+  rotate: false
+  xy: 1007, 1369
+  size: 319, 231
+  orig: 319, 231
+  offset: 0, 0
+  index: -1
+Blast 3
+  rotate: true
+  xy: 1609, 1023
+  size: 324, 366
+  orig: 324, 366
+  offset: 0, 0
+  index: -1
+Blsat 4
+  rotate: true
+  xy: 1574, 1349
+  size: 240, 400
+  orig: 240, 400
+  offset: 0, 0
+  index: -1
+Eyes Annoyed
+  rotate: false
+  xy: 1718, 1591
+  size: 238, 129
+  orig: 238, 129
+  offset: 0, 0
+  index: -1
+Eyes Blink
+  rotate: false
+  xy: 2, 1695
+  size: 242, 25
+  orig: 242, 25
+  offset: 0, 0
+  index: -1
+Eyes Crying
+  rotate: false
+  xy: 1110, 1602
+  size: 268, 118
+  orig: 268, 118
+  offset: 0, 0
+  index: -1
+Eyes Dead
+  rotate: false
+  xy: 852, 1616
+  size: 256, 104
+  orig: 256, 104
+  offset: 0, 0
+  index: -1
+Eyes Default
+  rotate: false
+  xy: 2, 1557
+  size: 242, 136
+  orig: 242, 136
+  offset: 0, 0
+  index: -1
+L Antena
+  rotate: true
+  xy: 246, 1661
+  size: 59, 213
+  orig: 59, 213
+  offset: 0, 0
+  index: -1
+L Arm
+  rotate: false
+  xy: 2, 1268
+  size: 504, 268
+  orig: 504, 268
+  offset: 0, 0
+  index: -1
+L Foot
+  rotate: false
+  xy: 676, 1642
+  size: 174, 78
+  orig: 174, 78
+  offset: 0, 0
+  index: -1
+R Foot
+  rotate: false
+  xy: 676, 1642
+  size: 174, 78
+  orig: 174, 78
+  offset: 0, 0
+  index: -1
+L Hand
+  rotate: false
+  xy: 584, 1454
+  size: 216, 186
+  orig: 216, 186
+  offset: 0, 0
+  index: -1
+R hand
+  rotate: false
+  xy: 584, 1454
+  size: 216, 186
+  orig: 216, 186
+  offset: 0, 0
+  index: -1
+L Leg
+  rotate: true
+  xy: 246, 1538
+  size: 121, 336
+  orig: 121, 336
+  offset: 0, 0
+  index: -1
+Layer 2 copy
+  rotate: true
+  xy: 802, 1413
+  size: 201, 203
+  orig: 201, 203
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: false
+  xy: 508, 1169
+  size: 283, 283
+  orig: 283, 283
+  offset: 0, 0
+  index: -1
+Plant
+  rotate: false
+  xy: 1299, 1052
+  size: 308, 295
+  orig: 308, 295
+  offset: 0, 0
+  index: -1
+R Antena
+  rotate: true
+  xy: 461, 1661
+  size: 59, 213
+  orig: 59, 213
+  offset: 0, 0
+  index: -1
+R Arm
+  rotate: false
+  xy: 793, 1099
+  size: 504, 268
+  orig: 504, 268
+  offset: 0, 0
+  index: -1
+R Leg
+  rotate: true
+  xy: 1380, 1600
+  size: 120, 336
+  orig: 120, 336
+  offset: 0, 0
+  index: -1
+
+PNG Parts Robot2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+7
+  rotate: true
+  xy: 812, 2
+  size: 865, 421
+  orig: 865, 421
+  offset: 0, 0
+  index: -1
+Layer 4
+  rotate: true
+  xy: 1235, 605
+  size: 488, 484
+  orig: 488, 484
+  offset: 0, 0
+  index: -1
+Layer 4 copy
+  rotate: false
+  xy: 2, 57
+  size: 808, 810
+  orig: 808, 810
+  offset: 0, 0
+  index: -1
+Layer 4 copy 2
+  rotate: false
+  xy: 2, 869
+  size: 1138, 1133
+  orig: 1138, 1133
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: false
+  xy: 1142, 1095
+  size: 535, 907
+  orig: 535, 907
+  offset: 0, 0
+  index: -1

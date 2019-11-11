@@ -1,0 +1,41 @@
+
+Trash_Monster.png
+size: 610,349
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 34
+  rotate: false
+  xy: 2, 2
+  size: 402, 345
+  orig: 402, 345
+  offset: 0, 0
+  index: -1
+Layer 73
+  rotate: false
+  xy: 406, 241
+  size: 104, 106
+  orig: 104, 106
+  offset: 0, 0
+  index: -1
+Layer 74
+  rotate: false
+  xy: 509, 137
+  size: 99, 102
+  orig: 99, 102
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: true
+  xy: 406, 42
+  size: 197, 101
+  orig: 197, 101
+  offset: 0, 0
+  index: -1
+mouth closed
+  rotate: false
+  xy: 509, 27
+  size: 97, 108
+  orig: 97, 108
+  offset: 0, 0
+  index: -1

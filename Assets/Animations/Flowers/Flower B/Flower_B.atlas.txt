@@ -1,0 +1,13 @@
+
+Flower_B.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 0
+  rotate: true
+  xy: 2, 2
+  size: 45, 91
+  orig: 45, 91
+  offset: 0, 0
+  index: -1

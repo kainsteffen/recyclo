@@ -1,0 +1,13 @@
+
+Flower_A.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 0
+  rotate: true
+  xy: 2, 2
+  size: 45, 88
+  orig: 45, 88
+  offset: 0, 0
+  index: -1
