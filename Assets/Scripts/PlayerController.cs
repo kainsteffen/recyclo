@@ -3,6 +3,7 @@ using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerController : MonoBehaviour
 
     public TouchController touchController;
     public TimeController timeController;
+
+    public GameObject noEnergyText;
+    public GameObject electricityEffect;
 
     public GameObject projectile;
     public ParticleSystem jumpParticle;
@@ -74,7 +78,7 @@ public class PlayerController : MonoBehaviour
     public Transform shootingPoint;
     public bool invertedAiming;
     public float aimLineLength;
-    private Vector2 aimDirection;
+    private Vector2 aimDirection = Vector2.right;
     private Vector2 dragStartPosition;
     public bool focusMode;
     public float deathYHeight;
@@ -125,30 +129,23 @@ public class PlayerController : MonoBehaviour
                 }
                 if (Input.GetMouseButtonUp(0))
                 {
+                    Shoot(aimDirection.normalized);
+                    currentAmmo--;
+                    StopFocusMode();
 
+                    Camera.main.DOShakePosition(0.1f, .5f);
 
-                    if (aimDirection.magnitude > 0)
-                    {
-                        Shoot(aimDirection.normalized);
-                        currentAmmo--;
-                        if (currentAmmo <= 1)
-                        {
-                            oilLeakParticle.Play();
-                            tileEffector.enabled = false;
-                        }
-                    }
-
-                StopFocusMode();
-
-                skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
+                    skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
                     skeletonAnimation.state.AddAnimation(0, "Haduken End", false, 0.433f);
                     skeletonAnimation.state.AddAnimation(0, "Running", true, 0.633f);
-                    
                 }
             }
             DetectItems();
             HandleHealth();
-
+            if(rb.velocity.x < 0.1f)
+            {
+                rb.velocity = new Vector2(0, -1000);
+            }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -158,8 +155,7 @@ public class PlayerController : MonoBehaviour
             FillAmmo(0.1f);
             if(currentAmmo >= 1)
             {
-                oilLeakParticle.Stop();
-                tileEffector.enabled = true;
+                DisableNoEnergyEffects();
             }
             Destroy(other.gameObject.gameObject);
         }
@@ -404,16 +400,38 @@ public class PlayerController : MonoBehaviour
     public void ExecuteFocusMode()
     {
         aimDirection = invertedAiming ? (dragStartPosition - (Vector2)Input.mousePosition) : -(dragStartPosition - (Vector2)Input.mousePosition);
+        aimDirection = aimDirection.magnitude > 0 ? aimDirection : Vector2.right;
         DrawLine(shootingPoint.position, ((Vector2)shootingPoint.position + (aimDirection.normalized * aimLineLength)));
     }
 
     public void StopFocusMode()
     {
-        chargeParticle.Stop();
+        if(currentAmmo < 1)
+        {
+            EnableNoEnergyEffects();
+        }
+
         timeController.StopSlowMotion();
+        chargeParticle.Stop();
         focusMode = false;
         lr.enabled = false;
         SoundManager.Instance.Stop("charge");
+    }
+
+    public void EnableNoEnergyEffects()
+    {
+        oilLeakParticle.Play();
+        electricityEffect.SetActive(true);
+        noEnergyText.SetActive(true);
+        tileEffector.enabled = false;
+    }
+
+    public void DisableNoEnergyEffects()
+    {
+        oilLeakParticle.Stop();
+        electricityEffect.SetActive(false);
+        noEnergyText.SetActive(false);
+        tileEffector.enabled = true;
     }
 
     public void StartWallSlide()
@@ -711,6 +729,7 @@ public class DeadState : State
         SoundManager.Instance.Play("death");
 
         owner.StopFocusMode();
+        owner.DisableNoEnergyEffects();
 
         owner.skeletonAnimation.ClearState();
         owner.skeletonAnimation.state.SetAnimation(0, "Death Animation", false);

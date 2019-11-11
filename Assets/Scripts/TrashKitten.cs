@@ -38,9 +38,10 @@ public class TrashKitten : EnemyBase
         {
             GameObject randomTrashItem = trashItems[Random.Range(0, trashItems.Length)];
             Vector2 randomTrashPos = new Vector2(
-                transform.position.x + Random.Range(-(collider.size.x / 2), collider.size.x / 2), 
-                transform.position.y + Random.Range(-(collider.size.y / 2), collider.size.y / 2));
+                transform.position.x + Random.Range(-(collider.size.x / 4), collider.size.x / 4), 
+                transform.position.y + Random.Range(-(collider.size.y / 4), collider.size.y / 4));
             GameObject newTrash = Instantiate(randomTrashItem, randomTrashPos, randomTrashItem.transform.rotation);
+            newTrash.GetComponent<Rigidbody2D>().AddForce((newTrash.transform.position - transform.position).normalized * 15, ForceMode2D.Impulse);
             StartCoroutine(DelayTargetAssign(newTrash, trashTargetAssignDelay + (i * 0.1f)));
         }
         StartCoroutine(DelayDeath());

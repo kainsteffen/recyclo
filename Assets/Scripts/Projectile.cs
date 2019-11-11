@@ -30,6 +30,7 @@ public class Projectile : MonoBehaviour
         if (collider.CompareTag("Enemy") && gameObject.CompareTag("PlayerProjectile"))
         {
             SoundManager.Instance.Play("hit_garbage");
+            StartCoroutine(FreezeFrame());
             collider.GetComponent<EnemyBase>().TakeDamage(damageAmount);
         }
 
@@ -48,6 +49,14 @@ public class Projectile : MonoBehaviour
         {
             collider.GetComponent<SwappableTile>().ShowGrassTile();
         }
+    }
+
+    IEnumerator FreezeFrame()
+    {
+        float originalTimescale = Time.timeScale;
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.3f);
+        Time.timeScale = originalTimescale;
     }
 
     void Die()

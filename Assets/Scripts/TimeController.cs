@@ -60,11 +60,11 @@ public class TimeController : MonoBehaviour
             Time.timeScale = Mathf.Lerp(Time.timeScale, slowDownFactor, 0.1f);
             slowDownTimer -= Time.unscaledDeltaTime;
         }
-        else if (defaultTimeScale - Time.timeScale < 0.05f)
+        else if (defaultTimeScale - Time.timeScale < 0.05f && !slowedDown)
         {
             Time.timeScale = Mathf.Lerp(Time.timeScale, defaultTimeScale, 0.1f);
         }
-        else
+        else if(!slowedDown)
         {
             Time.timeScale = defaultTimeScale;
             Time.fixedDeltaTime = defaultFixedDeltaTime;

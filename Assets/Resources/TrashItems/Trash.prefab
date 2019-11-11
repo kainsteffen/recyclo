@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7144500611262307828}
   - component: {fileID: 7144500611262307786}
   - component: {fileID: -88993919118898014}
+  - component: {fileID: -8915169482687629763}
   m_Layer: 16
   m_Name: Trash
   m_TagString: AmmoPickup
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: bb598672fcbee234fa203c7951b4da69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,3 +125,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2615385, y: 1.4615384}
   m_EdgeRadius: 0
+--- !u!50 &-8915169482687629763
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7144500611262307831}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
