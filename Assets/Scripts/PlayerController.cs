@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour
 
         if(other.CompareTag("Enemy"))
         {
+            Camera.main.DOShakePosition(0.2f, 1f);
             TakeDamage(1);
         }
     }

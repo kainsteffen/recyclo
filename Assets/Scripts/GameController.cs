@@ -129,7 +129,7 @@ public class GameController : MonoBehaviour
     {
         Reset();
         gameState = GameState.Ingame;
-
+        Camera.main.transform.position = new Vector3(0, 0, -10);
         SoundManager.Instance.Play("gameplay_Bgm", 1, 1);
 
         uiController.SetEndScreen(false);
