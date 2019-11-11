@@ -15,19 +15,14 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         Vector3 cameraPoint = Camera.main.WorldToViewportPoint(transform.position);
-        if (cameraPoint.x > 2 || cameraPoint.y > 2 && gameObject.CompareTag("PlayerProjectile")) {
-            Destroy(gameObject);
+        if ((cameraPoint.x > 1 || cameraPoint.y > 1) && gameObject.CompareTag("PlayerProjectile")) {
+            GetComponent<BoxCollider2D>().enabled = false;
         }
 
-        if (cameraPoint.x > 1.0 || cameraPoint.y > 1.0 && gameObject.CompareTag("EnemyProjectile"))
+        if ((cameraPoint.x > 1.0 || cameraPoint.y > 1.0) && gameObject.CompareTag("EnemyProjectile"))
         {
-            Destroy(gameObject);
+            Die();
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

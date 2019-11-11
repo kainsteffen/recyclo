@@ -121,7 +121,7 @@ public class GameController : MonoBehaviour
         SoundManager.Instance.Play("gameplay_Bgm", 1, 1);
         uiController.SetStartScreen(false);
         uiController.SetIngameUI(true);
-        touchController.gameObject.SetActive(true);
+        touchController.enabled = true;
         player.stateMachine.ChangeState(new GroundedState(player));
     }
 

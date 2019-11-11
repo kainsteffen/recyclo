@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 lookDirection;
 
-    private Rigidbody2D rb;
-    private LineRenderer lr;
+    public Rigidbody2D rb;
+    public LineRenderer lr;
     private float gravityDefaultScale;
     private float defaultDrag;
 
@@ -320,6 +320,12 @@ public class PlayerController : MonoBehaviour
         LimitMoveSpeed();
     }
 
+    public void MoveMaxSpeed(Vector2 direction)
+    {
+        SetLookDirection(direction);
+        rb.velocity = new Vector2(maxMoveSpeed, rb.velocity.y);
+    }
+
     void Jump()
     {
         if (jumpCounter > 0)
@@ -499,7 +505,7 @@ public class GroundedState : State
 
     public void Execute()
     {
-        owner.Move(Vector2.right);
+        owner.MoveMaxSpeed(Vector2.right);
         owner.HandleJumpInput();
         owner.HandSlideInput();
         owner.HandleJumpOffInput();
@@ -548,7 +554,7 @@ public class JumpingState : State
 
     public void Execute()
     {
-        owner.Move(Vector2.right);
+        owner.MoveMaxSpeed(Vector2.right);
         owner.HandleJumpInput();
 
         if (owner.CheckGround() && owner.isYVelocityZero() && !owner.focusMode)
