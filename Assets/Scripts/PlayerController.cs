@@ -726,7 +726,7 @@ public class DeadState : State
         timer = 2;
         owner.touchController.enabled = false;
 
-        SoundManager.Instance.FadeOut("gameplay_Bgm");
+        SoundManager.Instance.Stop("gameplay_Bgm");
         SoundManager.Instance.Play("death");
 
         owner.StopFocusMode();
