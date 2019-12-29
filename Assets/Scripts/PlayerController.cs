@@ -118,34 +118,30 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-            stateMachine.Update();
-            HandleFocusModeInput();
+        stateMachine.Update();
+        HandleFocusModeInput();
 
-            if (focusMode && !isDead)
+        if (focusMode && !isDead)
+        {
+            if (Input.GetMouseButton(0))
             {
-                if (Input.GetMouseButton(0))
-                {
-                    ExecuteFocusMode();
-                }
-                if (Input.GetMouseButtonUp(0))
-                {
-                    Shoot(aimDirection.normalized);
-                    currentAmmo--;
-                    StopFocusMode();
-
-                    Camera.main.DOShakePosition(0.1f, .5f);
-
-                    skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
-                    skeletonAnimation.state.AddAnimation(0, "Haduken End", false, 0.433f);
-                    skeletonAnimation.state.AddAnimation(0, "Running", true, 0.633f);
-                }
+                ExecuteFocusMode();
             }
-            DetectItems();
-            HandleHealth();
-            if(rb.velocity.x < 0.1f)
+            if (Input.GetMouseButtonUp(0))
             {
-                rb.velocity = new Vector2(0, -1000);
+                Shoot(aimDirection.normalized);
+                currentAmmo--;
+                StopFocusMode();
+
+                Camera.main.DOShakePosition(0.1f, .5f);
+
+                skeletonAnimation.state.SetAnimation(0, "Haduken Fire", false);
+                skeletonAnimation.state.AddAnimation(0, "Haduken End", false, 0.433f);
+                skeletonAnimation.state.AddAnimation(0, "Running", true, 0.633f);
             }
+        }
+        DetectItems();
+        HandleHealth();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -319,8 +315,16 @@ public class PlayerController : MonoBehaviour
 
     public void MoveMaxSpeed(Vector2 direction)
     {
-        SetLookDirection(direction);
-        rb.velocity = new Vector2(maxMoveSpeed, rb.velocity.y);
+        // TODO: Refactor bandaid fix for sticking to ground sideways
+        if (transform.position.y > -7)
+        {
+            SetLookDirection(direction);
+            rb.velocity = new Vector2(maxMoveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            Move(direction);
+        }
     }
 
     void Jump()
